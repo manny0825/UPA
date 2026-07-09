@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>まる皿うぱ ロゴ提案</title>
+    <style>
+      :root {
+        --ink: #15120e;
+        --paper: #fbf1dd;
+        --white: #fffaf0;
+        --yellow: #f4c841;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "Noto Sans JP", "BIZ UDPGothic", "Yu Gothic", sans-serif;
+      }
+
+      main {
+        width: min(100%, 1180px);
+        margin: 0 auto;
+        padding: 28px 18px;
+      }
+
+      h1 {
+        margin: 0 0 22px;
+        font-size: clamp(1.5rem, 5vw, 2.6rem);
+        line-height: 1.15;
+      }
+
+      .logo-grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .proposal {
+        overflow: hidden;
+        background: var(--white);
+        border: 3px solid var(--ink);
+        border-radius: 8px;
+        box-shadow: 6px 6px 0 var(--ink);
+      }
+
+      .proposal h2 {
+        margin: 0;
+        padding: 12px 14px;
+        background: var(--yellow);
+        border-bottom: 3px solid var(--ink);
+        font-size: 1rem;
+      }
+
+      .proposal img {
+        display: block;
+        width: 100%;
+        height: 360px;
+        padding: 24px;
+        object-fit: contain;
+      }
+
+      @media (min-width: 760px) {
+        .logo-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>まる皿うぱ ロゴ提案</h1>
+      <div class="logo-grid">
+        <section class="proposal">
+          <h2>01 うぱ顔 継承型</h2>
+          <img src="assets/logo-proposal-01-upa-face.svg" alt="うぱ顔 継承型のロゴ案" />
+        </section>
+        <section class="proposal">
+          <h2>02 丸皿シンボル型</h2>
+          <img src="assets/logo-proposal-02-round-plate.svg" alt="丸皿シンボル型のロゴ案" />
+        </section>
+        <section class="proposal">
+          <h2>05 店主推し 人柄型</h2>
+          <img src="assets/logo-proposal-05-word-face.svg" alt="店主推し 人柄型のロゴ案" />
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

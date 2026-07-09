@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">まる皿うぱ ロゴ案1 うぱ顔継承型</title>
+  <desc id="desc">旧ロゴの顔の親しみを残し、丸皿と現在の店名を組み合わせたロゴ案。</desc>
+  <defs>
+    <style>
+      .jp {
+        font-family: "Noto Sans JP", "BIZ UDPGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+      .latin {
+        font-family: Impact, "Arial Black", sans-serif;
+        letter-spacing: .08em;
+      }
+      .cream { fill: #fffaf0; }
+      .ink { fill: #15120e; }
+      .blue { fill: #2357c6; }
+      .red { fill: #e7472f; }
+      .stroke-cream { stroke: #fffaf0; stroke-width: 14; stroke-linejoin: round; paint-order: stroke fill; }
+      .stroke-ink { stroke: #15120e; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <g transform="translate(0 18)">
+    <text x="450" y="98" text-anchor="middle" class="jp blue stroke-cream" font-size="70">裏アビコ酒場</text>
+    <text x="450" y="236" text-anchor="middle" class="jp ink stroke-cream" font-size="126">まる皿うぱ</text>
+  </g>
+
+  <g transform="translate(450 520)">
+    <ellipse cx="0" cy="42" rx="278" ry="184" class="cream" opacity=".94"/>
+    <ellipse cx="0" cy="42" rx="278" ry="184" fill="none" class="stroke-ink"/>
+    <path d="M-268 12c-64 4-98-28-104-64m84 112c-70 14-108-12-126-52m106 110c-58 26-108 10-142-30" fill="none" class="stroke-ink"/>
+    <path d="M268 12c64 4 98-28 104-64m-84 112c70 14 108-12 126-52m-106 110c58 26 108 10 142-30" fill="none" class="stroke-ink"/>
+    <circle cx="-92" cy="20" r="22" class="ink"/>
+    <circle cx="92" cy="20" r="22" class="ink"/>
+    <path d="M-102 104c58 48 152 48 204 0" fill="none" class="stroke-ink" stroke-width="14"/>
+    <path d="M-40-138c36-70 126-56 138 10 10 50-22 88-76 90-36 2-64-16-72-48" class="ink"/>
+    <path d="M-34-112c28-26 66-28 94-6" fill="none" stroke="#fffaf0" stroke-width="12" stroke-linecap="round" opacity=".75"/>
+  </g>
+
+  <text x="450" y="835" text-anchor="middle" class="latin red" font-size="38">MARUZARA UPA</text>
+</svg>
