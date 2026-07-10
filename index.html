@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="大阪・あびこ。昼は選べるプレートランチの熱帯maniac、夜は塩ソーキとガイトートで飲める裏アビコ酒場 まる皿うぱ。予約はInstagram DMへ。"
+    />
+    <title>熱帯maniac / まる皿うぱ | 大阪・あびこ</title>
+    <!-- OGP: 公開ドメインが決まったら og:url / og:image を絶対URLに差し替える -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="熱帯maniac / まる皿うぱ" />
+    <meta property="og:title" content="熱帯maniac / まる皿うぱ | 大阪・あびこ" />
+    <meta
+      property="og:description"
+      content="昼は選べるプレートランチの熱帯maniac、夜は塩ソーキとガイトートで飲める裏アビコ酒場 まる皿うぱ。予約はInstagram DMへ。"
+    />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content="https://REPLACE-WITH-DOMAIN.example/assets/article-night-main.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="assets/favicon-180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=RocknRoll+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Restaurant",
+            "name": "熱帯maniac",
+            "description": "メインを選べるワンプレートのエスニックランチ。カオマンガイ、海南鶏飯、コムガー、沖縄そば、ソーキそば。テイクアウト可。",
+            "servesCuisine": ["アジア料理", "タイ料理", "沖縄料理"],
+            "priceRange": "¥1,000前後",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "我孫子3-10-24",
+              "addressLocality": "大阪市住吉区",
+              "addressRegion": "大阪府",
+              "addressCountry": "JP"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "12:00",
+                "closes": "15:00"
+              }
+            ],
+            "sameAs": ["https://www.instagram.com/nettaimaniac/"],
+            "hasMap": "https://maps.app.goo.gl/uq1thsWHEAECLK3E9"
+          },
+          {
+            "@type": "Restaurant",
+            "name": "裏アビコ酒場 まる皿 うぱ",
+            "description": "塩ソーキとガイトートを名物に、枠に囚われないジャンルレスな小皿で飲める居酒屋。カウンター・テーブル・立ち飲み。定休は月曜・火曜・第2水曜。",
+            "servesCuisine": ["居酒屋", "アジア料理"],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "我孫子3-10-24",
+              "addressLocality": "大阪市住吉区",
+              "addressRegion": "大阪府",
+              "addressCountry": "JP"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "17:00",
+                "closes": "25:00"
+              }
+            ],
+            "sameAs": ["https://www.instagram.com/maruzara_upa/"],
+            "hasMap": "https://maps.app.goo.gl/LU6iDA8EYaZcU8mW7"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main">本文へ移動</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="トップへ">
+        <img class="brand-logo brand-logo-lunch" src="assets/logo-nettai-maniac.png" alt="熱帯maniac" />
+        <span class="brand-separator" aria-hidden="true"></span>
+        <img class="brand-logo brand-logo-night" src="assets/logo-maruzara-upa.png" alt="裏アビコ酒場 まる皿うぱ" />
+      </a>
+      <nav class="header-nav" aria-label="主要メニュー">
+        <a href="about.html">ABOUT</a>
+        <a href="party.html">貸切</a>
+        <a href="access.html">ACCESS</a>
+      </nav>
+      <a class="header-reserve js-reserve-link" href="https://www.instagram.com/maruzara_upa/" target="_blank" rel="noopener">予約</a>
+    </header>
+
+    <main id="main" class="fv" aria-label="昼と夜、ふたつの店">
+      <div class="fv-tabbar">
+        <div class="fv-tabs">
+          <div class="fv-tablist" role="tablist" aria-label="昼夜を切り替える">
+            <button
+              class="fv-tab fv-tab-lunch"
+              type="button"
+              role="tab"
+              id="tab-lunch"
+              aria-controls="panel-lunch"
+              aria-selected="false"
+              data-target="0"
+            >
+              昼 / 熱帯maniac
+            </button>
+            <button
+              class="fv-tab fv-tab-night"
+              type="button"
+              role="tab"
+              id="tab-night"
+              aria-controls="panel-night"
+              aria-selected="false"
+              data-target="2"
+            >
+              夜 / まる皿うぱ
+            </button>
+          </div>
+          <button class="fv-home" type="button" data-target="1" aria-label="TOPに戻る" aria-pressed="true">
+            <span aria-hidden="true">TOP</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="fv-viewport">
+        <div class="fv-track" data-index="1">
+          <!-- 昼タブ -->
+          <section class="fv-panel" id="panel-lunch" role="tabpanel" aria-labelledby="tab-lunch">
+            <div class="fv-panel-scroll">
+              <section class="panel-hero">
+                <img class="concept-bg" src="assets/nettai-top-food.jpg" alt="" />
+                <div class="hero-brand">
+                  <img class="hero-brand-logo hero-brand-logo-lunch" src="assets/logo-nettai-maniac.png" alt="熱帯maniac" />
+                  <h2 class="visually-hidden">熱帯maniac</h2>
+                </div>
+                <button class="hero-scroll-cue js-scroll-hint" type="button">
+                  <span>SCROLL!!</span>
+                  <span class="scroll-hint-arrow" aria-hidden="true"></span>
+                </button>
+              </section>
+
+              <section class="panel-concept">
+                <div class="concept-copy js-reveal">
+                  <p class="stamp stamp-lunch">LUNCH 12:00-15:00</p>
+                  <h3>選べるプレートで、<br />昼から熱帯。</h3>
+                  <p>
+                    おかずを2種・3種と選べるワンプレートのエスニックランチが看板。カオマンガイにガイトート、ガパオ、沖縄のソーキそばまで。昼のあびこで、気軽にアジアごはん。テイクアウトもできます。
+                  </p>
+                </div>
+              </section>
+
+              <section class="panel-details" aria-label="熱帯maniacの詳細">
+                <p class="tag tag-lunch">SHOP DETAILS</p>
+                <h3>熱帯maniac</h3>
+                <dl class="detail-list">
+                  <div>
+                    <dt>時間</dt>
+                    <dd>12:00-15:00 / L.O. 14:30</dd>
+                  </div>
+                  <div>
+                    <dt>定休</dt>
+                    <dd>月曜日</dd>
+                  </div>
+                  <div>
+                    <dt>推し</dt>
+                    <dd>選べる! ワンプレート エスニックランチ</dd>
+                  </div>
+                  <div>
+                    <dt>持帰</dt>
+                    <dd>テイクアウト可</dd>
+                  </div>
+                  <div>
+                    <dt>喫煙</dt>
+                    <dd>終日禁煙</dd>
+                  </div>
+                </dl>
+
+                <section class="menu-feature" aria-label="選べるワンプレート エスニックランチ">
+                  <p class="tag tag-lunch">イチオシ</p>
+                  <h4>選べる! ワンプレート<br />エスニックランチ</h4>
+                  <p class="menu-feature-sub">ライス・サラダ・スープ付</p>
+                  <div class="plate-prices">
+                    <div>
+                      <span>2種盛</span>
+                      <strong>¥1,000</strong>
+                    </div>
+                    <div>
+                      <span>3種盛</span>
+                      <strong>¥1,100</strong>
+                    </div>
+                    <div>
+                      <span>目玉焼き追加</span>
+                      <strong>+¥100</strong>
+                    </div>
+                  </div>
+                  <p class="menu-choices-title">おかずはこの中から</p>
+                  <ul class="menu-choices">
+                    <li>カオマンガイ or コムガー <em>+¥100</em></li>
+                    <li>ガイトート <em>+¥200</em></li>
+                    <li>ソーキ</li>
+                    <li>ヤムウンセン</li>
+                    <li>ガパオライス</li>
+                    <li>本日のおかず</li>
+                  </ul>
+                </section>
+
+                <details class="menu-paper">
+                  <summary class="menu-paper-toggle">
+                    <span>紙のメニューを見る</span>
+                    <span class="menu-paper-toggle-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="menu-images" aria-label="熱帯maniacの紙のメニュー(プレート)">
+                    <a
+                      class="menu-image-card"
+                      href="assets/nettai-plate-menu.jpg"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="選べるプレートメニューを大きく表示"
+                    >
+                      <img
+                        src="assets/nettai-plate-menu.jpg"
+                        alt="選べるワンプレート エスニックランチのメニュー画像"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <span>タップで拡大</span>
+                    </a>
+                  </div>
+                </details>
+
+                <section class="menu-group" aria-label="ごはんメニュー">
+                  <h4 class="menu-group-title">ごはん<span>スープ・サラダ・ライス付 / おかわりライス無料</span></h4>
+                  <ul class="menu-list">
+                    <li>
+                      <div class="menu-row">
+                        <span class="menu-name">カオマンガイ</span>
+                        <span class="menu-leader" aria-hidden="true"></span>
+                        <span class="menu-price">¥950</span>
+                      </div>
+                      <p class="menu-desc">がつんと屋台風! みそベースのピリ辛だれ</p>
+                    </li>
+                    <li>
+                      <div class="menu-row">
+                        <span class="menu-name">海南鶏飯</span>
+                        <span class="menu-leader" aria-hidden="true"></span>
+                        <span class="menu-price">¥950</span>
+                      </div>
+                      <p class="menu-desc">日本人好み! 醤油・生姜・チリソースでアレンジ自由!!</p>
+                    </li>
+                    <li>
+                      <div class="menu-row">
+                        <span class="menu-name">コムガー</span>
+                        <span class="menu-leader" aria-hidden="true"></span>
+                        <span class="menu-price">¥950</span>
+                      </div>
+                      <p class="menu-desc">辛いのが苦手な方へ。レモン果汁入りさっぱりだれ</p>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="menu-group" aria-label="そばメニュー">
+                  <h4 class="menu-group-title">そば<span>サラダ付 / ライスも無料で付けられます</span></h4>
+                  <ul class="menu-list">
+                    <li>
+                      <div class="menu-row">
+                        <span class="menu-name">沖縄そば</span>
+                        <span class="menu-leader" aria-hidden="true"></span>
+                        <span class="menu-price">¥900</span>
+                      </div>
+                      <p class="menu-desc">とろとろソーキがたまらん!!</p>
+                    </li>
+                    <li>
+                      <div class="menu-row">
+                        <span class="menu-name">ソーキそば</span>
+                        <span class="menu-leader" aria-hidden="true"></span>
+                        <span class="menu-price">¥950</span>
+                      </div>
+                      <p class="menu-desc">ソーキ増し!! 増し!!!</p>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="menu-group" aria-label="ドリンクメニュー">
+                  <h4 class="menu-group-title">ドリンク</h4>
+                  <ul class="menu-list">
+                    <li>
+                      <div class="menu-row">
+                        <span class="menu-name">オリオンビール</span>
+                        <span class="menu-leader" aria-hidden="true"></span>
+                        <span class="menu-price">¥500</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="menu-row">
+                        <span class="menu-name">ソフトドリンク</span>
+                        <span class="menu-leader" aria-hidden="true"></span>
+                        <span class="menu-price">¥300</span>
+                      </div>
+                      <p class="menu-desc">ジンジャーエール・コーラ・黒ウーロン茶・緑茶・オレンジジュース</p>
+                    </li>
+                  </ul>
+                </section>
+
+                <details class="menu-paper">
+                  <summary class="menu-paper-toggle">
+                    <span>紙のメニューを見る</span>
+                    <span class="menu-paper-toggle-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="menu-images" aria-label="熱帯maniacの紙のメニュー(グランド)">
+                    <a
+                      class="menu-image-card"
+                      href="assets/nettai-grand-menu.jpg"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="熱帯maniacのグランドメニューを大きく表示"
+                    >
+                      <img
+                        src="assets/nettai-grand-menu.jpg"
+                        alt="熱帯maniacのグランドメニュー画像"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <span>タップで拡大</span>
+                    </a>
+                  </div>
+                </details>
+
+                <ul class="menu-notes">
+                  <li>パクチー「いるよ!!」という方は、ご注文時にお申し付けください。</li>
+                  <li>混雑時は相席・1時間制をお願いすることがあります。</li>
+                </ul>
+
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="https://www.instagram.com/nettaimaniac/" target="_blank" rel="noopener">
+                    Instagram DMで予約
+                  </a>
+                  <a class="btn btn-secondary" href="https://maps.app.goo.gl/uq1thsWHEAECLK3E9" target="_blank" rel="noopener">
+                    昼のGoogle Map
+                  </a>
+                </div>
+
+                <button class="btn btn-ghost js-go-night" type="button">裏アビコ酒場 まる皿うぱ →</button>
+
+                <p class="source-note">
+                  写真・店舗情報参照:
+                  <a href="https://sumi2.jp/open-close/nettai-maniac/" target="_blank" rel="noopener">すみすみナビ「熱帯maniac」</a>
+                </p>
+              </section>
+            </div>
+          </section>
+
+          <!-- TOP(左右半々) -->
+          <section class="fv-panel fv-cover" id="panel-cover" aria-label="TOP">
+            <button class="cover-half cover-lunch js-go-lunch" type="button">
+              <img src="assets/nettai-top-food.jpg" alt="" />
+              <span class="cover-label">
+                <span class="cover-badge badge-lunch">昼</span>
+                <span class="cover-name">熱帯maniac</span>
+                <span class="cover-hours">12:00-15:00</span>
+              </span>
+            </button>
+            <button class="cover-half cover-night js-go-night" type="button">
+              <img src="assets/store-interior-seats.jpg" alt="" />
+              <span class="cover-label">
+                <span class="cover-badge badge-night">夜</span>
+                <span class="cover-name">まる皿うぱ</span>
+                <span class="cover-hours">17:00-25:00</span>
+              </span>
+            </button>
+
+            <div class="cover-center" aria-hidden="false">
+              <h1>昼は熱帯、<br />夜はうぱ。</h1>
+              <p>大阪・あびこ / 同じ場所のふたつの店</p>
+            </div>
+
+            <p class="cover-hint" aria-hidden="true">
+              <span class="hint-arrow hint-left"></span>
+              SWIPE or CLICK
+              <span class="hint-arrow hint-right"></span>
+            </p>
+          </section>
+
+          <!-- 夜タブ -->
+          <section class="fv-panel" id="panel-night" role="tabpanel" aria-labelledby="tab-night">
+            <div class="fv-panel-scroll">
+              <section class="panel-hero">
+                <img class="concept-bg" src="assets/store-interior-wide.jpg" alt="" fetchpriority="high" />
+                <div class="hero-brand">
+                  <img class="hero-brand-logo hero-brand-logo-night" src="assets/logo-maruzara-upa.png" alt="裏アビコ酒場 まる皿うぱ" />
+                  <h2 class="visually-hidden">裏アビコ酒場 まる皿うぱ</h2>
+                </div>
+                <button class="hero-scroll-cue js-scroll-hint" type="button">
+                  <span>SCROLL!!</span>
+                  <span class="scroll-hint-arrow" aria-hidden="true"></span>
+                </button>
+              </section>
+
+              <section class="panel-concept">
+                <div class="concept-copy js-reveal">
+                  <p class="stamp stamp-night">NIGHT 17:00-25:00</p>
+                  <h3>ふらっと寄って、<br />気づけば常連。</h3>
+                  <p>
+                    カウンターでうぱと話す夜も、立ち飲みでサクッと一杯の夜も、テーブルで家族とゆっくりの夜も。席と過ごし方が選べる、人でつながる裏アビコ酒場です。肴は塩ソーキとガイトート、ジャンルレスな小皿たち。
+                  </p>
+                </div>
+              </section>
+
+              <section class="panel-details" aria-label="まる皿うぱの詳細">
+                <p class="tag tag-night">SHOP DETAILS</p>
+                <h3>裏アビコ酒場 まる皿 うぱ</h3>
+                <dl class="detail-list">
+                  <div>
+                    <dt>時間</dt>
+                    <dd>17:00-25:00 / L.O. 24:30</dd>
+                  </div>
+                  <div>
+                    <dt>定休</dt>
+                    <dd>月曜・火曜・第2水曜</dd>
+                  </div>
+                  <div>
+                    <dt>推し</dt>
+                    <dd>塩ソーキ、ガイトート</dd>
+                  </div>
+                  <div>
+                    <dt>席</dt>
+                    <dd>カウンター・テーブル・立ち飲み</dd>
+                  </div>
+                  <div>
+                    <dt>喫煙</dt>
+                    <dd>21:00〜</dd>
+                  </div>
+                </dl>
+
+                <div class="seat-note" aria-label="席の楽しみ方">
+                  <article>
+                    <span class="seat-icon" aria-hidden="true">C</span>
+                    <h4>カウンター</h4>
+                    <p>ひとり飯やサク飲み、うぱさんとの会話を楽しむ席。</p>
+                  </article>
+                  <article>
+                    <span class="seat-icon" aria-hidden="true">T</span>
+                    <h4>テーブル</h4>
+                    <p>家族の早めごはんや、アジア料理で飲む会に。</p>
+                  </article>
+                  <article>
+                    <span class="seat-icon" aria-hidden="true">S</span>
+                    <h4>立ち飲み</h4>
+                    <p>一杯だけでも、小皿をつまんで気軽に長居でも。</p>
+                  </article>
+                </div>
+
+                <div class="notice-callout" aria-label="喫煙について">
+                  <p class="stamp">喫煙について</p>
+                  <p>
+                    21:00から店内で喫煙いただけます。お子様には21:00までのご退店にご協力をお願いしています。
+                  </p>
+                </div>
+
+                <div class="party-callout">
+                  <p class="stamp stamp-night">宴会・貸切</p>
+                  <p>飲み会も貸切も相談ください。人数や料理のイメージはDMで。</p>
+                  <a class="btn btn-secondary" href="party.html">貸切ページを見る</a>
+                </div>
+
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="https://www.instagram.com/maruzara_upa/" target="_blank" rel="noopener">
+                    Instagram DMで予約
+                  </a>
+                  <a class="btn btn-secondary" href="https://maps.app.goo.gl/LU6iDA8EYaZcU8mW7" target="_blank" rel="noopener">
+                    夜のGoogle Map
+                  </a>
+                </div>
+
+                <button class="btn btn-ghost js-go-lunch" type="button">← 熱帯maniac</button>
+
+                <p class="source-note">
+                  写真・店舗情報参照:
+                  <a href="https://sumi2.jp/open-close/uraabiko-maruzara-upa-open/" target="_blank" rel="noopener">すみすみナビ「裏アビコ酒場 まる皿 うぱ」</a>
+                </p>
+              </section>
+            </div>
+          </section>
+        </div>
+
+        <button class="fv-arrow fv-arrow-left" type="button" aria-label="左のパネルへ">
+          <span class="fv-arrow-tri" aria-hidden="true"></span>
+          <span class="js-arrow-label">昼</span>
+        </button>
+        <button class="fv-arrow fv-arrow-right" type="button" aria-label="右のパネルへ">
+          <span class="js-arrow-label">夜</span>
+          <span class="fv-arrow-tri" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <p class="visually-hidden" aria-live="polite" id="fv-live"></p>
+    </main>
+
+    <nav class="mobile-cta" aria-label="固定アクション">
+      <a href="about.html">ABOUT</a>
+      <a href="party.html">貸切</a>
+      <a href="access.html">ACCESS</a>
+      <a class="mobile-cta-reserve js-reserve-link" href="https://www.instagram.com/maruzara_upa/" target="_blank" rel="noopener">予約</a>
+    </nav>
+
+    <script src="script.js"></script>
+  </body>
+</html>
