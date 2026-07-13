@@ -374,7 +374,8 @@ a {
 }
 
 .badge-lunch {
-  background: var(--yellow);
+  color: var(--white);
+  background: var(--green-deep);
 }
 
 .badge-night {
@@ -764,11 +765,19 @@ a {
 .menu-feature,
 .menu-group {
   margin-top: 18px;
-  padding: 16px;
   background: var(--white);
   border: 3px solid var(--ink);
   border-radius: 8px;
   box-shadow: 6px 6px 0 var(--ink);
+}
+
+.menu-feature {
+  padding: 16px;
+}
+
+.menu-group {
+  padding: 0 16px 16px;
+  overflow: hidden;
 }
 
 .menu-feature {
@@ -864,25 +873,45 @@ a {
   white-space: nowrap;
 }
 
+/* 長い選択肢もモバイルで一行に収める */
+.menu-choices .menu-choice-combo {
+  flex-wrap: nowrap;
+  gap: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+  font-size: 0.66rem;
+  white-space: nowrap;
+}
+
+.menu-choices .menu-choice-combo em {
+  font-size: 0.64rem;
+}
+
 .menu-group-title {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   gap: 4px 10px;
-  margin: 0 0 4px;
-  font-size: 1.08rem;
+  margin: 0 -16px 14px;
+  padding: 10px 14px 11px;
+  color: var(--white);
+  background: var(--green-deep);
+  border-bottom: 3px solid var(--ink);
+  font-size: 1.2rem;
+  line-height: 1.1;
   font-weight: 950;
 }
 
 .menu-group-title span {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 800;
+  opacity: 0.94;
 }
 
 .menu-list {
   display: grid;
   gap: 12px;
-  margin: 8px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -1345,7 +1374,7 @@ li {
 /* メニュー見出しの注記(〜付/無料など)は本文書体に戻す */
 .menu-group-title span {
   font-family: var(--font-body);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
 }
 
