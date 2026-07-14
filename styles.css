@@ -873,18 +873,12 @@ a {
   white-space: nowrap;
 }
 
-/* 長い選択肢もモバイルで一行に収める */
-.menu-choices .menu-choice-combo {
+/* 追加料金のある選択肢は、2列分を使う横長の表示にする */
+.menu-choices .menu-choice-wide {
+  grid-column: 1 / -1;
   flex-wrap: nowrap;
   gap: 4px;
-  padding-right: 6px;
-  padding-left: 6px;
-  font-size: 0.66rem;
   white-space: nowrap;
-}
-
-.menu-choices .menu-choice-combo em {
-  font-size: 0.64rem;
 }
 
 .menu-group-title {
@@ -1102,6 +1096,12 @@ a {
   box-shadow: 4px 4px 0 var(--ink);
 }
 
+.btn-multiline {
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.12;
+}
+
 .btn-primary {
   background: var(--yellow);
 }
@@ -1170,10 +1170,33 @@ a {
 }
 
 .source-note {
-  margin: 22px auto 0;
-  font-size: 0.76rem;
-  line-height: 1.7;
-  font-weight: 800;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  margin: 28px auto 0;
+  padding-top: 14px;
+  color: rgba(21, 18, 14, 0.72);
+  border-top: 2px solid rgba(21, 18, 14, 0.24);
+  font-size: 0.72rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.source-note a {
+  color: inherit;
+  overflow-wrap: anywhere;
+  text-underline-offset: 3px;
+}
+
+.source-label {
+  flex: 0 0 auto;
+  padding: 2px 6px;
+  color: var(--paper);
+  background: var(--ink);
+  font-family: var(--font-latin);
+  font-size: 0.68rem;
+  font-weight: 500;
 }
 
 h1,
@@ -1272,6 +1295,115 @@ li {
   height: 100%;
   object-fit: cover;
   opacity: 0.42;
+}
+
+.access-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(21, 18, 14, 0.78), rgba(21, 18, 14, 0.08) 72%);
+  pointer-events: none;
+}
+
+.access-hero img {
+  opacity: 0.72;
+  filter: brightness(1.18) saturate(1.06) contrast(0.96);
+}
+
+.access-guide {
+  margin-bottom: 18px;
+}
+
+.access-facts {
+  display: grid;
+  gap: 0;
+  margin: 2px 0 0;
+}
+
+.access-facts > div {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 2px solid rgba(21, 18, 14, 0.18);
+}
+
+.access-facts dt,
+.access-facts dd {
+  margin: 0;
+}
+
+.access-facts dt {
+  font-weight: 950;
+}
+
+.access-facts dd {
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+.hours-note {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  background: rgba(255, 250, 240, 0.72);
+  border-left: 4px solid var(--blue);
+  font-size: 0.76rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.access-hours-note {
+  margin-top: 18px;
+}
+
+.access-map {
+  margin-top: 18px;
+}
+
+.access-map-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.access-map-heading h2 {
+  margin: 5px 0 0;
+  font-size: 1.25rem;
+}
+
+.access-map-heading > p,
+.map-caption {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.access-map-heading > p {
+  max-width: 18rem;
+  text-align: right;
+}
+
+.map-embed {
+  height: clamp(300px, 56vw, 400px);
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  background: var(--paper-deep);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-caption {
+  margin-top: 12px;
 }
 
 .party-grid .info-card,

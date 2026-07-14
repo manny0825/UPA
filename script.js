@@ -39,14 +39,15 @@ if (viewport && track) {
   function updateArrows() {
     const scroller = panels[index]?.querySelector(".fv-panel-scroll");
     const isReading = Boolean(scroller && scroller.scrollTop > 48);
+    const isCover = index === COVER;
 
     if (arrowLeft) {
-      arrowLeft.classList.toggle("is-hidden", index === LUNCH || isReading);
+      arrowLeft.classList.toggle("is-hidden", index === LUNCH || isCover || isReading);
       const label = arrowLeft.querySelector(".js-arrow-label");
       if (label && index > LUNCH) label.textContent = shortNames[index - 1];
     }
     if (arrowRight) {
-      arrowRight.classList.toggle("is-hidden", index === NIGHT || isReading);
+      arrowRight.classList.toggle("is-hidden", index === NIGHT || isCover || isReading);
       const label = arrowRight.querySelector(".js-arrow-label");
       if (label && index < NIGHT) label.textContent = shortNames[index + 1];
     }
@@ -67,11 +68,13 @@ if (viewport && track) {
       const isActive = Number(button.dataset.target) === index;
       button.classList.toggle("is-active", isActive);
       button.setAttribute("aria-selected", String(isActive));
+      button.tabIndex = isActive ? 0 : -1;
     });
 
     if (homeButton) {
       homeButton.classList.toggle("is-active", index === COVER);
       homeButton.setAttribute("aria-pressed", String(index === COVER));
+      homeButton.tabIndex = index === COVER ? 0 : -1;
     }
 
     updateArrows();
@@ -256,14 +259,23 @@ if (viewport && track) {
 
   // --- キーボード ---
 
-  document.querySelector(".fv")?.addEventListener("keydown", (event) => {
+  const modeControls = [...tabButtons, homeButton].filter(Boolean);
+
+  document.querySelector(".fv-tabs")?.addEventListener("keydown", (event) => {
+    if (!modeControls.includes(event.target)) return;
+
     if (event.key === "ArrowLeft") {
       event.preventDefault();
       goTo(index - 1);
     } else if (event.key === "ArrowRight") {
       event.preventDefault();
       goTo(index + 1);
+    } else {
+      return;
     }
+
+    const activeControl = index === COVER ? homeButton : tabButtons.find((button) => Number(button.dataset.target) === index);
+    activeControl?.focus();
   });
 
   // --- ハッシュ(#lunch / #night)で直接タブを開く ---
@@ -273,9 +285,26 @@ if (viewport && track) {
     return i === -1 ? COVER : i;
   }
 
+  function openFromHash(hash, { announce = true } = {}) {
+    const isPrivateParty = hash === "#private-party";
+    goTo(isPrivateParty ? NIGHT : indexFromHash(hash), { announce });
+
+    if (!isPrivateParty) return;
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.getElementById("private-party")?.scrollIntoView({ block: "center" });
+        try {
+          history.replaceState(null, "", "#private-party");
+        } catch {
+          /* file:// 直開きなどではURL更新を省略する */
+        }
+      });
+    });
+  }
+
   window.addEventListener("hashchange", () => {
-    goTo(indexFromHash(location.hash));
+    openFromHash(location.hash);
   });
 
-  goTo(indexFromHash(location.hash), { announce: false });
+  openFromHash(location.hash, { announce: false });
 }

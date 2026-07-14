@@ -7,21 +7,23 @@
     <title>ACCESS | 熱帯maniac / まる皿うぱ</title>
     <link rel="icon" href="assets/favicon-upa.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/favicon-upa.png" />
-    <!-- OGP: 公開ドメインが決まったら og:image を絶対URLに差し替える -->
+    <!-- OGP: GitHub Pagesの公開URLを使用 -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="熱帯maniac / まる皿うぱ" />
     <meta property="og:title" content="ACCESS | 熱帯maniac / まる皿うぱ" />
     <meta property="og:description" content="大阪市住吉区我孫子3-10-24。昼と夜でGoogle Mapの表示名が違います。" />
     <meta property="og:locale" content="ja_JP" />
-    <meta property="og:image" content="https://REPLACE-WITH-DOMAIN.example/assets/store-exterior.jpg" />
+    <meta property="og:image" content="https://manny0825.github.io/UPA/assets/favicon-upa.png" />
+    <meta property="og:image:alt" content="まる皿うぱのロゴ" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://manny0825.github.io/UPA/assets/favicon-upa.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=RocknRoll+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260714-2" />
   </head>
   <body data-page="sub">
     <header class="site-header">
@@ -38,8 +40,8 @@
     </header>
 
     <main>
-      <section class="sub-hero photo-hero">
-        <img src="assets/store-exterior.jpg" alt="" />
+      <section class="sub-hero photo-hero access-hero">
+        <img src="assets/store-exterior.jpg" alt="熱帯maniac・まる皿うぱの店舗外観" />
         <div class="section-inner">
           <p class="section-kicker">ACCESS</p>
           <h1>同じ場所で、昼と夜。</h1>
@@ -49,6 +51,45 @@
 
       <section class="sub-section">
         <div class="section-inner">
+          <article class="info-card access-guide" aria-labelledby="access-guide-title">
+            <p class="stamp">GETTING HERE</p>
+            <h2 id="access-guide-title">あびこ町駅から徒歩3分。</h2>
+            <dl class="access-facts">
+              <div>
+                <dt>最寄駅</dt>
+                <dd>JR阪和線 あびこ町駅から徒歩3分<br />大阪メトロ御堂筋線 あびこ駅から徒歩8分</dd>
+              </div>
+              <div>
+                <dt>目印</dt>
+                <dd>近くの「肉のハナマサ」と、店先の黄色いのぼり</dd>
+              </div>
+              <div>
+                <dt>駐車・駐輪</dt>
+                <dd>専用の駐車場・駐輪場はありません。お車は近隣のコインパーキングをご利用ください。</dd>
+              </div>
+            </dl>
+          </article>
+
+          <section class="access-map" aria-labelledby="access-map-title">
+            <div class="access-map-heading">
+              <div>
+                <p class="stamp">MAP</p>
+                <h2 id="access-map-title">お店の場所</h2>
+              </div>
+              <p>昼と夜は同じ住所です。</p>
+            </div>
+            <div class="map-embed">
+              <iframe
+                title="熱帯maniac・まる皿うぱのGoogle Map"
+                src="https://www.google.com/maps?q=%E3%80%92558-0014%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%BD%8F%E5%90%89%E5%8C%BA%E6%88%91%E5%AD%AB%E5%AD%903%E4%B8%81%E7%9B%AE10-24&amp;z=17&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="map-caption">営業時間などの登録情報は、下の昼・夜それぞれのGoogle Mapからご確認ください。</p>
+          </section>
+
           <div class="access-grid">
             <article class="info-card">
               <p class="stamp">LUNCH</p>
@@ -63,6 +104,7 @@
               <a class="btn btn-secondary" href="https://maps.app.goo.gl/LU6iDA8EYaZcU8mW7" target="_blank" rel="noopener">夜のGoogle Map</a>
             </article>
           </div>
+          <p class="hours-note access-hours-note">営業時間・定休日は変更になる場合があります。最新情報は各店のInstagramをご確認ください。</p>
         </div>
       </section>
     </main>
@@ -73,6 +115,6 @@
       <a href="access.html">ACCESS</a>
       <a class="mobile-cta-reserve" href="https://www.instagram.com/maruzara_upa/" target="_blank" rel="noopener">予約</a>
     </nav>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260714"></script>
   </body>
 </html>
