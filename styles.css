@@ -1323,10 +1323,15 @@ li {
 
 .access-facts > div {
   display: grid;
-  grid-template-columns: 5rem minmax(0, 1fr);
-  gap: 10px;
-  padding: 12px 0;
-  border-top: 2px solid rgba(21, 18, 14, 0.18);
+  grid-template-columns: 5.9rem minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 13px 0;
+  border-top: 1px solid rgba(21, 18, 14, 0.24);
+}
+
+.access-facts > div:last-child {
+  border-bottom: 1px solid rgba(21, 18, 14, 0.24);
 }
 
 .access-facts dt,
@@ -1335,10 +1340,24 @@ li {
 }
 
 .access-facts dt {
+  display: grid;
+  min-height: 34px;
+  place-items: center;
+  padding: 5px 7px;
+  color: var(--ink);
+  background: var(--yellow);
+  border: 1px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  font-size: 0.78rem;
   font-weight: 950;
+  line-height: 1.15;
+  text-align: center;
 }
 
 .access-facts dd {
+  align-self: center;
+  padding-left: 12px;
+  border-left: 2px solid rgba(21, 18, 14, 0.2);
   line-height: 1.7;
   font-weight: 700;
 }
